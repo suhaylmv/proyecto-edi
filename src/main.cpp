@@ -1,8 +1,7 @@
 #include <iostream>
+#include "User/UserTests.h"
+#include "Scooter/ScooterTests.h"
 using namespace std;
-
-#include "UserTests.h"
-#include "ScooterTests.h"
 
 int main() {
   cout << "Hello World" << endl;

@@ -1,7 +1,6 @@
 #include <iostream>
-using namespace std;
-
 #include "BankAccount.h"
+using namespace std;
 
 BankAccount::BankAccount(){
   cout << "Executing default constructor for User" << endl;

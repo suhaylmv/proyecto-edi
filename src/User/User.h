@@ -1,7 +1,7 @@
+#pragma once
 #include <iostream>
+#include "../BankAccount/BankAccount.h"
 using namespace std;
-
-#include "BankAccount.h"
 
 class User {
   private:
