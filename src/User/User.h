@@ -7,37 +7,41 @@ class User {
   private:
     string fullName;
     string phoneNumber;
+    string email;
     int age;
     string id;
     BankAccount *bankAccount;
   public:
-    // Constructors
+    // CONSTRUCTORS
     User();
-    User(string fullName, string phoneNumber, int age, string id);
+    User(string fullName, string phoneNumber, string email, int age, string id, BankAccount *bankAccount);
     User(const User &user);
 
-    // Getters
+    // GETTERS
     string getFullName() const;
     void getFullName2(string &fullName) const;
     string getPhoneNumber() const;
+    string getEmail() const;
     int getAge() const;
+    string getId() const;
 
-    //
-    // Setters
-    //
+    // SETTERS
     // fullName -> string that contains a name and at least a single surname, separated by a space
     void setFullName(string fullName);
     // phoneNumber ...
     void setPhoneNumber(string phoneNumber);
+
+    void setEmail(string email);
     // age -> integer
     void setAge(int age);
 
-    string getId() const;
+    void setId(string id);
 
-    // Other methods
+
+    // OTHER METHODS
     void consolePrint() const;
     string stringify() const;
 
-    // Destructors
+    // DESTRUCTORS
     ~User();
 };
