@@ -1,7 +1,7 @@
 #include "User.h"
 
 User::User(){
-  cout << "INFO: executing constructor: User (default)" << endl;
+  cout << "INFO: User: executing constructor (default)" << endl;
   fullName = "";
   phoneNumber = "";
   email = "";
@@ -11,7 +11,7 @@ User::User(){
 }
 
 User::User(string fullName, string phoneNumber, string email, int age, string id, BankAccount *bankAccount){
-  cout << "INFO: executing constructor: User (parameterized)" << endl;
+  cout << "INFO: User: executing constructor (parameterized)" << endl;
   this->fullName = fullName;
   this->phoneNumber = phoneNumber;
   this->email = email;
@@ -21,7 +21,7 @@ User::User(string fullName, string phoneNumber, string email, int age, string id
 }
 
 User::User(const User &user){
-  cout << "INFO: executing constructor: User (copy)" << endl;
+  cout << "INFO: User: executing constructor (copy)" << endl;
   fullName = user.fullName;
   phoneNumber = user.phoneNumber;
   email = user.email;
@@ -66,6 +66,6 @@ string User::stringify() const {
 }
 
 User::~User(){
-  cout << "INFO: executing destructor: User -> " << fullName << endl;
+  cout << "INFO: User: executing destructor for \"" << fullName << "\"" << endl;
   delete bankAccount;
 }
