@@ -11,13 +11,11 @@ void userTestsStaticInstance(){
   u1.setEmail("jorgelopezz2006@gmail.com");
   u1.setId("Y1312234L");
   u1.setAge(18);
-  u1.consolePrint();
+  u1.print();
 
-  BankAccount *bankAccount2 = new BankAccount();
-  bankAccount2->deposit(500);
-  User u2("Perro Sanxe", "+34888999000", "perrosanxe33@gmail.com", 33, "Y1232442L", bankAccount2);
+  User u2("Perro Sanxe", "+34888999000", "perrosanxe33@gmail.com", 33, "Y1232442L");
   User u3 = u2;
-  u3.consolePrint();
+  u3.print();
 
   cout << "*********************************************" << endl << endl << endl;
 }
@@ -32,16 +30,14 @@ void userTestsDynamicInstance(){
   u1->setEmail("jorgelopezz2006@gmail.com");
   u1->setId("Y1312234L");
   u1->setAge(18);
-  u1->consolePrint();
+  u1->print();
 
 
-  BankAccount *bankAccount2 = new BankAccount();
-  bankAccount2->deposit(49123876);
-  User *u2 = new User("Perro Sanxe", "+34888999000", "perrosanxe33@gmail.com", 33, "Y1232442L", bankAccount2);
+  User *u2 = new User("Perro Sanxe", "+34888999000", "perrosanxe33@gmail.com", 33, "Y1232442L");
   User *u3 = new User(*u2);
 
-  u1->consolePrint();
-  u3->consolePrint();
+  u1->print();
+  u3->print();
 
   delete u1;
   delete u2;

@@ -14,7 +14,7 @@ class User {
   public:
     // CONSTRUCTORS
     User();
-    User(string fullName, string phoneNumber, string email, int age, string id, BankAccount *bankAccount);
+    User(string fullName, string phoneNumber, string email, int age, string id);
     User(const User &user);
 
     // GETTERS
@@ -39,7 +39,8 @@ class User {
 
 
     // OTHER METHODS
-    void consolePrint() const;
+    void print() const;
+    void printName() const;
     string stringify() const;
 
     // DESTRUCTORS

@@ -3,19 +3,19 @@
 using namespace std;
 
 BankAccount::BankAccount(){
-  cout << "INFO: executing constructor: BankAccount (default)" << endl;
+  cout << "INFO: BankAccount: executing constructor (default)" << endl;
   accountNumber = "0000-0000-0000-0000";
   balance = 0;
 }
 
 BankAccount::BankAccount(string accountNumber, int balance){
-  cout << "INFO: executing constructor: BankAccount (parametrized)" << endl;
+  cout << "INFO: BankAccount: executing constructor (parameterized)" << endl;
   this->accountNumber = accountNumber;
   this->balance = balance;
 }
 
 BankAccount::BankAccount(const BankAccount &bankAccount) {
-  cout << "INFO: executing constructor: BankAccount (copy)" << endl;
+  cout << "INFO: BankAccount: executing constructor (copy)" << endl;
   accountNumber = bankAccount.accountNumber;
   balance = bankAccount.balance;
 }

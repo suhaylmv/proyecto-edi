@@ -4,7 +4,7 @@ using namespace std;
 
 // SETTERS
 Station::Station(){
-  cout << "INFO: executing constructor: Station (default)" << endl;
+  cout << "INFO: Station: executing constructor (default)" << endl;
   id = "";
   address = "";
   numAvailable = 0;
@@ -89,8 +89,8 @@ void Station::fixScooter(){
 // PRINT
 void Station::print() const {
   cout << "PRINT: Station:" << endl;
-  cout << "--id: " << id << endl;
-  cout << "--address: " << address << endl;
+  cout << "--id: \"" << id << "\"" << endl;
+  cout << "--address: \"" << address << "\"" << endl;
   cout << "--numAvailable: " << numAvailable << endl;
   printAvailableScooters(false);
   printBrokenScooters(false);

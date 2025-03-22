@@ -10,14 +10,14 @@ User::User(){
   bankAccount = new BankAccount();
 }
 
-User::User(string fullName, string phoneNumber, string email, int age, string id, BankAccount *bankAccount){
+User::User(string fullName, string phoneNumber, string email, int age, string id){
   cout << "INFO: User: executing constructor (parameterized)" << endl;
   this->fullName = fullName;
   this->phoneNumber = phoneNumber;
   this->email = email;
   this->age = age;
   this->id = id;
-  this->bankAccount = bankAccount;
+  bankAccount = new BankAccount();
 }
 
 User::User(const User &user){
@@ -47,16 +47,18 @@ void User::setEmail(string email){ this->email = email;}
 void User::setAge(int age){ this->age = age; }
 void User::setId(string id){ this->id = id; }
 
-void User::consolePrint() const {
-  cout << "---------------------------------------------" << endl;
+void User::print() const {
   cout << "PRINT: User: " << fullName << endl;
-  cout << "Phone number: " << phoneNumber << endl;
-  cout << "Email : " << email << endl;
-  cout << "Age: " << age << endl;
-  cout << "ID: " << id << endl;
+  cout << "--phone number: \"" << phoneNumber << "\""  << endl;
+  cout << "--email: \"" << email << "\"" << endl;
+  cout << "--age: " << age << endl;
+  cout << "--id: \"" << id << "\"" << endl;
 
   bankAccount->consolePrint();
-  cout << "---------------------------------------------" << endl;
+}
+
+void User::printName() const {
+  cout << "--\"" << fullName << "\"" << endl;
 }
 
 string User::stringify() const {
